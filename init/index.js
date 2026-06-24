@@ -47,7 +47,7 @@ const initDB = async () => {
     await Listing.deleteMany({});
     initData.data = initData.data.map((obj) => ({
         ...obj,
-        owner: "6d6b8256e4c70034dc141151", // Fallback owner ID or local user ID
+        owner: "6a3b7161b9754c2a63a4121b", // Fallback owner ID or local user ID
         category: getCategory(obj.title, obj.description)
     }));
     await Listing.insertMany(initData.data);
